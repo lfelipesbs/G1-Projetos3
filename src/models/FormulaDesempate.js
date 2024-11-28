@@ -1,8 +1,9 @@
 class FormulaDesempate {
     aplicarCriterios(alunos) {
-        // Implementação do critério de desempate
-        return alunos[0].nome.localeCompare(alunos[1].nome);
+        if (alunos[0].nome < alunos[1].nome) return -1;
+        if (alunos[0].nome > alunos[1].nome) return 1;
+        return 0;
     }
 }
 
-module.exports = FormulaDesempate;
+export default FormulaDesempate;

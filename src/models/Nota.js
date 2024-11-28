@@ -9,4 +9,4 @@ class Nota {
     }
 }
 
-module.exports = Nota;
+export default Nota;

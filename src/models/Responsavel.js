@@ -16,6 +16,12 @@ class Responsavel {
     acessarHubInformacoes(hubInformacoes) {
         return hubInformacoes.acessarDesempenhoResponsavel(this);
     }
+
+    adicionarDependente(aluno) {
+        if (!this.dependentes.includes(aluno)) {
+            this.dependentes.push(aluno)
+        }
+    }
 }
 
-module.exports = Responsavel;
+export default Responsavel;

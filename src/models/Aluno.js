@@ -13,7 +13,10 @@ class Aluno {
     }
 
     visualizarNotas() {
-        return this.notas;
+        return this.notas.map((nota) => ({
+            disciplina: nota.disciplina,
+            valor: nota.calcularNota()
+        }));
     }
 
     visualizarRanking(rankingService) {
@@ -21,4 +24,4 @@ class Aluno {
     }
 }
 
-module.exports = Aluno;
+export default Aluno;

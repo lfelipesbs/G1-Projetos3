@@ -2,10 +2,13 @@ class Coordenador {
     constructor(nome, idCoordenador) {
         this.nome = nome;
         this.idCoordenador = idCoordenador;
+        this.turmas = [];
     }
 
     gerenciarTurmas() {
-      // Implementação da lógica para gerenciar turmas
+        if (!this.turmas.includes(turma)){
+            this.turmas.push(turma);
+        }
     }
 
     escolherInformacoesDivulgadas() {
@@ -32,4 +35,4 @@ class Coordenador {
     }
 }
 
-module.exports = Coordenador;
+export default Coordenador;

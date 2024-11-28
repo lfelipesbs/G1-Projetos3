@@ -8,7 +8,7 @@ class Ranking {
         this.listaAlunos.sort((a, b) => {
             const mediaA = a.calcularMedia();
             const mediaB = b.calcularMedia();
-            
+
             if (mediaB !== mediaA) {
                 return mediaB - mediaA;
             } else {
@@ -22,4 +22,4 @@ class Ranking {
     }
 }
 
-module.exports = Ranking;
+export default Ranking;

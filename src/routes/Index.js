@@ -1,8 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const notaController = require('../controllers/NotaController');
+import { Router } from 'express';
+import { adicionarNota, consultarRanking, acessarDesempenhoResponsavel } from '../controllers/NotaController';
 
-router.post('/notas', notaController.adicionarNota);
-router.get('/ranking', notaController.consultarRanking);
+const router = Router();
 
-module.exports = router;
+router.post('/notas', adicionarNota);
+router.get('/ranking', consultarRanking);
+router.get('/responsavel/:idResponsavel', acessarDesempenhoResponsavel);
+
+export default router;

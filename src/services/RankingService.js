@@ -1,5 +1,5 @@
-const Ranking = require('../models/Ranking');
-const FormulaDesempate = require('../models/FormulaDesempate');
+import Ranking from '../models/Ranking';
+import FormulaDesempate from '../models/FormulaDesempate';
 
 class RankingService {
     constructor() {
@@ -22,4 +22,4 @@ class RankingService {
     }
 }
 
-module.exports = RankingService;
+export default RankingService;

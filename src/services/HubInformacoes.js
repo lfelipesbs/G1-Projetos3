@@ -1,24 +1,11 @@
-const RankingService = require('./RankingService');
+import RankingService from './RankingService';
 
 class HubInformacoes {
     constructor() {
         this.alunos = [];
         this.responsaveis = [];
+        this.coordenadores = [];
         this.rankingService = new RankingService();
-    }
-
-    adicionarNota(aluno, nota) {
-        aluno.notas.push(nota);
-    
-        this.rankingService.calcularRanking(this.alunos.filter((a) => a.turma === aluno.turma));
-    }
-
-    consultarRanking(turma) {
-        return this.rankingService.consultarRanking(turma, this.alunos);
-    }
-
-    acessarDesempenhoResponsavel(responsavel) {
-        return responsavel.visualizarDesempenhoDependentes();
     }
 
     adicionarAluno(aluno) {
@@ -28,6 +15,26 @@ class HubInformacoes {
     adicionarResponsavel(responsavel) {
         this.responsaveis.push(responsavel);
     }
+
+    adicionarCoordenador(coordenador) {
+        this.coordenadores.push(coordenador);
+    }
+
+    obterAlunoPorMatricula(matricula) {
+        return this.alunos.find((aluno) => aluno.matricula === matricula);
+    }
+
+    obterResponsavelPorId(idResponsavel) {
+        return this.responsaveis.find((resp) => resp.idResponsavel === idResponsavel);
+    }
+
+    consultarRanking(turma) {
+        return this.rankingService.consultarRanking(turma, this.alunos);
+    }
+
+    acessarDesempenhoResponsavel(responsavel) {
+        return responsavel.visualizarDesempenhoDependentes();
+    }
 }
 
-module.exports = HubInformacoes;
+export default HubInformacoes;

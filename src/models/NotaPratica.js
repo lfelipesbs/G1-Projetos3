@@ -1,4 +1,4 @@
-const Nota = require('./Nota');
+import Nota from "./Nota";
 
 class NotaPratica extends Nota {
     constructor(valor, disciplina, pesoPratico) {
@@ -11,4 +11,4 @@ class NotaPratica extends Nota {
     }
 }
 
-module.exports = NotaPratica;
+export default NotaPratica;

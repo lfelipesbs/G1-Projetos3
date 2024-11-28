@@ -1,12 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const routes = require('./routes/index');
+import express from 'express';
+import { json } from 'body-parser';
+import cors from 'cors';
+import routes from './routes/index';
 
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json());
 app.use('/api', routes);
 
-module.exports = app;
+export default app;
