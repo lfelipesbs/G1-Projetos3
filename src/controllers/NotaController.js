@@ -1,10 +1,10 @@
-import HubInformacoes from '../services/HubInformacoes';
-import Aluno from '../models/Aluno';
-import Nota from '../models/Nota';
-import NotaTeorica from '../models/NotaTeorica';
-import NotaPratica from '../models/NotaPratica';
-import Responsavel from '../models/Responsavel';
-import Coordenador from '../models/Coordenador';
+import HubInformacoes from '../services/HubInformacoes.js';
+import Aluno from '../models/Aluno.js';
+import Nota from '../models/Nota.js';
+import NotaTeorica from '../models/NotaTeorica.js';
+import NotaPratica from '../models/NotaPratica.js';
+import Responsavel from '../models/Responsavel.js';
+import Coordenador from '../models/Coordenador.js';
 
 const hubInformacoes = new HubInformacoes();
 
@@ -29,7 +29,7 @@ coordenador.gerenciarTurmas('Turma B');
 
 hubInformacoes.adicionarCoordenador(coordenador);
 
-const adicionarNota = (req, res) => {
+export const adicionarNota = (req, res) => {
     const { matriculaAluno, valor, disciplina, tipoNota, peso } = req.body;
 
     const aluno = hubInformacoes.obterAlunoPorMatricula(matriculaAluno);
@@ -51,7 +51,7 @@ const adicionarNota = (req, res) => {
     res.status(200).json({ mensagem: 'Nota adicionada com sucesso' });
 };
 
-const consultarRanking = (req, res) => {
+export const consultarRanking = (req, res) => {
     const { turma } = req.query;
     if (!turma) {
         return res.status(400).json({ message: 'Turma não especificada '});
@@ -60,7 +60,7 @@ const consultarRanking = (req, res) => {
     res.status(200).json(ranking);
 };
 
-const acessarDesempenhoResponsavel = (req, res) => {
+export const acessarDesempenhoResponsavel = (req, res) => {
     const { idResponsavel } = req.params;
     const responsavel = hubInformacoes.obterResponsavelPorId(idResponsavel);
     if (!responsavel) {
@@ -68,10 +68,4 @@ const acessarDesempenhoResponsavel = (req, res) => {
     }
     const desempenho = hubInformacoes.acessarDesempenhoResponsavel(responsavel);
     res.status(200).json(desempenho);
-};
-
-export default {
-    adicionarNota,
-    consultarRanking,
-    acessarDesempenhoResponsavel
 };

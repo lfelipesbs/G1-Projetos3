@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { adicionarNota, consultarRanking, acessarDesempenhoResponsavel } from '../controllers/NotaController';
+import { adicionarNota, consultarRanking, acessarDesempenhoResponsavel } from '../controllers/NotaController.js';
 
 const router = Router();
 

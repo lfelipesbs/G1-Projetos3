@@ -1,5 +1,5 @@
-import Ranking from '../models/Ranking';
-import FormulaDesempate from '../models/FormulaDesempate';
+import Ranking from '../models/Ranking.js';
+import FormulaDesempate from '../models/FormulaDesempate.js';
 
 class RankingService {
     constructor() {

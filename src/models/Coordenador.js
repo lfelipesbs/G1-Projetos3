@@ -5,15 +5,15 @@ class Coordenador {
         this.turmas = [];
     }
 
-    gerenciarTurmas() {
+    gerenciarTurmas(turma) {
         if (!this.turmas.includes(turma)){
             this.turmas.push(turma);
         }
     }
 
-    escolherInformacoesDivulgadas() {
-      // Implementação da lógica para escolher informações divulgadas
-    }
+    // escolherInformacoesDivulgadas() {
+    //   // Implementação da lógica para escolher informações divulgadas
+    // }
 
     adicionarNota(aluno, nota) {
         aluno.notas.push(nota);
@@ -30,9 +30,9 @@ class Coordenador {
         }
     }
 
-    gerarPDFInformacoes(aluno) {
-      // Implementação da lógica para gerar PDF com informações do aluno
-    }
+    // gerarPDFInformacoes(aluno) {
+    //   // Implementação da lógica para gerar PDF com informações do aluno
+    // }
 }
 
 export default Coordenador;

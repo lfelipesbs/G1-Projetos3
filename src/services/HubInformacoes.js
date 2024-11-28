@@ -1,4 +1,4 @@
-import RankingService from './RankingService';
+import RankingService from './RankingService.js';
 
 class HubInformacoes {
     constructor() {

@@ -1,4 +1,4 @@
-import Nota from "./Nota";
+import Nota from "./Nota.js";
 
 class NotaTeorica extends Nota {
     constructor(valor, disciplina, pesoTeorico) {
