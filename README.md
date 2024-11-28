@@ -95,7 +95,7 @@ A API possui três rotas principais. Você pode testá-las usando ferramentas co
 
 ### 1. **Adicionar Nota**
 
-- **Endpoint**: `POST http://localhost:3000/api/notas`
+- **Endpoint**: `POST http://localhost:3000/notas`
 - **Descrição**: Permite que o coordenador adicione uma nota a um aluno específico.
 - **Cabeçalhos**:
 
@@ -145,13 +145,13 @@ A API possui três rotas principais. Você pode testá-las usando ferramentas co
 
 ### 2. **Consultar Ranking**
 
-- **Endpoint**: `GET http://localhost:3000/api/ranking`
+- **Endpoint**: `GET http://localhost:3000/ranking`
 - **Descrição**: Retorna o ranking dos alunos de uma turma específica.
 - **Parâmetros de Consulta**:
 
   - **turma** (obrigatório): Nome da turma a ser consultada.
 
-  Exemplo: `GET http://localhost:3000/api/ranking?turma=Turma%20A`
+  Exemplo: `GET http://localhost:3000/ranking?turma=Turma%20A`
 
 - **Resposta de Sucesso** (Status 200):
 
@@ -180,13 +180,13 @@ A API possui três rotas principais. Você pode testá-las usando ferramentas co
 
 ### 3. **Acessar Desempenho do Responsável**
 
-- **Endpoint**: `GET http://localhost:3000/api/responsavel/:idResponsavel`
+- **Endpoint**: `GET http://localhost:3000/responsavel/:idResponsavel`
 - **Descrição**: Retorna o desempenho de todos os dependentes associados a um responsável específico.
 - **Parâmetros de Rota**:
 
   - **idResponsavel**: Identificação do responsável.
 
-  Exemplo: `GET http://localhost:3000/api/responsavel/R001`
+  Exemplo: `GET http://localhost:3000/responsavel/R001`
 
 - **Resposta de Sucesso** (Status 200):
 
