@@ -277,20 +277,6 @@ package.json
 
 ---
 
-## Contato
-
-Se você tiver alguma dúvida ou encontrar problemas ao executar o projeto, não hesite em entrar em contato:
-
-- **Nome**: [Seu Nome]
-- **E-mail**: [seuemail@exemplo.com]
-- **GitHub**: [https://github.com/seuusuario](https://github.com/seuusuario)
-
----
-
-**Observação**: Este projeto foi desenvolvido como parte de um exercício de programação orientada a objetos em Node.js, seguindo as melhores práticas de desenvolvimento e organização de código.
-
----
-
 # Instruções Adicionais para Avaliadores
 
 Para facilitar o processo de avaliação, seguem algumas informações adicionais:
