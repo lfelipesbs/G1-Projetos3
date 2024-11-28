@@ -2,6 +2,13 @@
 
 Este é um sistema desenvolvido em Node.js para gerenciar notas e rankings de alunos, permitindo que coordenadores escolares adicionem notas, visualizem rankings e disponibilizem informações centralizadas para os responsáveis.
 
+Desenvolvido por:
+ - Icaro Barros
+ - Juliana Linden
+ - Luiz Felipe Soriano
+ - Miguel Andrade
+ - Pedro Dhalia
+
 ## Índice
 
 - [Pré-requisitos](#pré-requisitos)
@@ -15,7 +22,6 @@ Este é um sistema desenvolvido em Node.js para gerenciar notas e rankings de al
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Possíveis Melhorias](#possíveis-melhorias)
-- [Contato](#contato)
 
 ---
 
@@ -312,5 +318,3 @@ Para facilitar o processo de avaliação, seguem algumas informações adicionai
 - **Importante**: Certifique-se de que o Node.js está na versão LTS recomendada e que todas as dependências estão instaladas corretamente antes de iniciar o servidor.
 
 ---
-
-Esperamos que estas instruções sejam úteis e que o sistema atenda às expectativas dos avaliadores. Agradecemos o seu tempo e feedback!
